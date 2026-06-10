@@ -236,10 +236,9 @@ header {
     background-color: var(--accent);
     height: 100%;
     border-radius: 3px;
-    width: 0%; /* Set to 0% initially so JavaScript can drive the load animation */
+    width: 0%; 
     transition: width 0.5s cubic-bezier(0.1, 0.76, 0.55, 0.94);
 }
-
 
 .progress-label {
     display: block;
@@ -275,16 +274,23 @@ header {
     direction: ltr;
 }
 
+/* UPDATED FOR CLEAN IMAGE HANDLING */
 .project-display {
-    background: #1e293b;
     border-radius: 8px;
     height: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    overflow: hidden; 
     border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* NEW IMAGE BEHAVIOR UTILITY */
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
 }
 
 .project-info h3 {
